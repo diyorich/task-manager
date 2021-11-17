@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::resource('/tags', 'TagsController');
+Route::get('/tasktag/{tag_id}', 'TagsController@show')->name('tasktag.show');
 
 Route::get('/', 'TasksController@index')->name('tasks.index');
 Route::get('/tasks/create', 'TasksController@create')->name('tasks.create');

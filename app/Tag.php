@@ -39,4 +39,6 @@ class Tag extends Model
     {
         $this->delete();
     }
+
+
 }

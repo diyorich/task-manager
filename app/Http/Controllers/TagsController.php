@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Tag;
+use App\Task;
 use Illuminate\Http\Request;
+
 
 class TagsController extends Controller
 {
@@ -26,6 +28,12 @@ class TagsController extends Controller
     public function create()
     {
         return view('tags.create');
+    }
+
+    public function show($tag_id)
+    {
+        $tag = Tag::find($tag_id);
+        return view('tags.show', compact('tag', 'tasks'));
     }
 
     /**

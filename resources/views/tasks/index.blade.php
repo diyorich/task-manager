@@ -22,7 +22,7 @@
         "></td>
         <td>
             @foreach($task->tags as $tag)
-                <b style="color: {{$tag->color}}">{{$tag->title}}</b> 
+                <a href="{{route('tasktag.show', $tag->id)}}"><b style="color: {{$tag->color}}">{{$tag->title}}</b></a>
                 @if(!$loop->last)
                 , 
                 @endif
